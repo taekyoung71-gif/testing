@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700">
   <rect width="100%" height="100%" fill="#f7f8fb" />
   <g stroke="#8a95a5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-    <polygon points="200,300 1200,300 1240,270 240,270" fill="#edf0f5" />
-    <polygon points="1200,300 1200,500 1240,470 1240,270" fill="#c1c9d4" />
-    <polygon points="200,300 1200,300 1200,500 200,500" fill="#d9dee6" />
-    <line x1="200" y1="356.0" x2="1200" y2="356.0" stroke="#6b7788" stroke-width="3" />
-    <line x1="200" y1="444.0" x2="1200" y2="444.0" stroke="#6b7788" stroke-width="3" />
+    <polygon points="200,300 1300,300 1344,272 244,272" fill="#edf0f5" />
+    <polygon points="1300,300 1300,520 1344,492 1344,272" fill="#c1c9d4" />
+    <polygon points="200,300 1300,300 1300,520 200,520" fill="#d9dee6" />
+    <line x1="200" y1="361.6" x2="1300" y2="361.6" stroke="#6b7788" stroke-width="3" />
+    <line x1="200" y1="458.4" x2="1300" y2="458.4" stroke="#6b7788" stroke-width="3" />
   </g>
   <g stroke="#8a95a5" stroke-width="2">
-    <rect x="160" y="370" width="40" height="60" fill="#d4d7dd" />
-    <ellipse cx="160" cy="400" rx="16" ry="22" fill="#d4d7dd" stroke="#8a95a5" />
-    <ellipse cx="160" cy="400" rx="7.2" ry="9.9" fill="#7d8796" stroke="#8a95a5" />
+    <rect x="172" y="370" width="28" height="80" rx="10" ry="10" fill="#d4d7dd" />
+    <circle cx="186.0" cy="410" r="11" fill="#d4d7dd" stroke="#8a95a5" />
+    <circle cx="186.0" cy="410" r="5" fill="#7d8796" stroke="#8a95a5" />
 
-    <rect x="1200" y="370" width="40" height="60" fill="#d4d7dd" />
-    <ellipse cx="1240" cy="400" rx="16" ry="22" fill="#d4d7dd" stroke="#8a95a5" />
-    <ellipse cx="1240" cy="400" rx="7.2" ry="9.9" fill="#7d8796" stroke="#8a95a5" />
+    <rect x="1300" y="370" width="28" height="80" rx="10" ry="10" fill="#d4d7dd" />
+    <circle cx="1314.0" cy="410" r="11" fill="#d4d7dd" stroke="#8a95a5" />
+    <circle cx="1314.0" cy="410" r="5" fill="#7d8796" stroke="#8a95a5" />
   </g>
   <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-    <text x="700.0" y="410.0" font-size="36" fill="#1f2a38" font-weight="700">SDI PRISMATIC CELL</text>
-    <text x="700.0" y="450.0" font-size="22" fill="#1f2a38">500mm x 100mm x 20mm</text>
-    <text x="700.0" y="482.0" font-size="18" fill="#1f2a38">Terminals on left/right sides</text>
+    <text x="750.0" y="421.0" font-size="36" fill="#1f2a38" font-weight="700">SDI PRISMATIC CELL</text>
+    <text x="750.0" y="461.0" font-size="22" fill="#1f2a38">500mm x 100mm x 20mm</text>
+    <text x="750.0" y="493.0" font-size="18" fill="#1f2a38">Terminals on left/right sides</text>
   </g>
 </svg>

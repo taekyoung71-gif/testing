@@ -27,8 +27,9 @@ class CellGeometry:
     depth_y: int
     terminal_length: int
     terminal_height: int
-    terminal_radius_x: int
-    terminal_radius_y: int
+    terminal_corner_radius: int
+    terminal_hole_radius: int
+    terminal_hole_ring: int
 
 
 CANVAS_WIDTH = 1400
@@ -36,14 +37,15 @@ CANVAS_HEIGHT = 700
 GEOMETRY = CellGeometry(
     x=200,
     y=300,
-    width=1000,
-    height=200,
-    depth_x=40,
-    depth_y=-30,
-    terminal_length=40,
-    terminal_height=60,
-    terminal_radius_x=16,
-    terminal_radius_y=22,
+    width=1100,
+    height=220,
+    depth_x=44,
+    depth_y=-28,
+    terminal_length=28,
+    terminal_height=80,
+    terminal_corner_radius=10,
+    terminal_hole_radius=11,
+    terminal_hole_ring=5,
 )
 
 
@@ -113,6 +115,8 @@ def build_svg(variant: str, colors: Colors) -> str:
     left_terminal_x = x - geo.terminal_length
     right_terminal_x = x + width
     terminal_center_y = terminal_y + geo.terminal_height // 2
+    terminal_center_left_x = left_terminal_x + geo.terminal_length * 0.5
+    terminal_center_right_x = right_terminal_x + geo.terminal_length * 0.5
 
     label_x = x + width * 0.5
     label_y = y + height * 0.55
@@ -127,13 +131,13 @@ def build_svg(variant: str, colors: Colors) -> str:
     <line x1="{x}" y1="{y + height * 0.72}" x2="{x + width}" y2="{y + height * 0.72}" stroke="{colors.accent}" stroke-width="3" />
   </g>
   <g stroke="{colors.stroke}" stroke-width="2">
-    <rect x="{left_terminal_x}" y="{terminal_y}" width="{geo.terminal_length}" height="{geo.terminal_height}" fill="{colors.terminal}" />
-    <ellipse cx="{left_terminal_x}" cy="{terminal_center_y}" rx="{geo.terminal_radius_x}" ry="{geo.terminal_radius_y}" fill="{colors.terminal}" stroke="{colors.stroke}" />
-    <ellipse cx="{left_terminal_x}" cy="{terminal_center_y}" rx="{geo.terminal_radius_x * 0.45}" ry="{geo.terminal_radius_y * 0.45}" fill="{colors.terminal_ring}" stroke="{colors.stroke}" />
+    <rect x="{left_terminal_x}" y="{terminal_y}" width="{geo.terminal_length}" height="{geo.terminal_height}" rx="{geo.terminal_corner_radius}" ry="{geo.terminal_corner_radius}" fill="{colors.terminal}" />
+    <circle cx="{terminal_center_left_x}" cy="{terminal_center_y}" r="{geo.terminal_hole_radius}" fill="{colors.terminal}" stroke="{colors.stroke}" />
+    <circle cx="{terminal_center_left_x}" cy="{terminal_center_y}" r="{geo.terminal_hole_ring}" fill="{colors.terminal_ring}" stroke="{colors.stroke}" />
 
-    <rect x="{right_terminal_x}" y="{terminal_y}" width="{geo.terminal_length}" height="{geo.terminal_height}" fill="{colors.terminal}" />
-    <ellipse cx="{right_terminal_x + geo.terminal_length}" cy="{terminal_center_y}" rx="{geo.terminal_radius_x}" ry="{geo.terminal_radius_y}" fill="{colors.terminal}" stroke="{colors.stroke}" />
-    <ellipse cx="{right_terminal_x + geo.terminal_length}" cy="{terminal_center_y}" rx="{geo.terminal_radius_x * 0.45}" ry="{geo.terminal_radius_y * 0.45}" fill="{colors.terminal_ring}" stroke="{colors.stroke}" />
+    <rect x="{right_terminal_x}" y="{terminal_y}" width="{geo.terminal_length}" height="{geo.terminal_height}" rx="{geo.terminal_corner_radius}" ry="{geo.terminal_corner_radius}" fill="{colors.terminal}" />
+    <circle cx="{terminal_center_right_x}" cy="{terminal_center_y}" r="{geo.terminal_hole_radius}" fill="{colors.terminal}" stroke="{colors.stroke}" />
+    <circle cx="{terminal_center_right_x}" cy="{terminal_center_y}" r="{geo.terminal_hole_ring}" fill="{colors.terminal_ring}" stroke="{colors.stroke}" />
   </g>
   <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
     <text x="{label_x}" y="{label_y}" font-size="36" fill="{colors.label}" font-weight="700">{variant.upper()} PRISMATIC CELL</text>
