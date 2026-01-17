@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prismatic Battery Cell Renders</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Prismatic battery cell renders</p>
+        <h1>3D-styled visuals for 500mm x 100mm x 20mm cells</h1>
+        <p class="hero-subtitle">
+          Terminal layouts match left and right side placements, with visual cues inspired by CATL,
+          BYD, and SDI product photography.
+        </p>
+        <div class="hero-badges">
+          <span>CATL</span>
+          <span>BYD</span>
+          <span>SDI</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <article class="card">
+        <div class="card-header">
+          <h2>CATL inspired</h2>
+          <p>Dark housing with orange accent lines.</p>
+        </div>
+        <img src="assets/prismatic-cell-catl.svg" alt="CATL style prismatic cell render" />
+        <ul>
+          <li>500mm x 100mm x 20mm</li>
+          <li>Terminals on left and right sides</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h2>BYD inspired</h2>
+          <p>Cool blue palette with crisp highlights.</p>
+        </div>
+        <img src="assets/prismatic-cell-byd.svg" alt="BYD style prismatic cell render" />
+        <ul>
+          <li>500mm x 100mm x 20mm</li>
+          <li>Terminals on left and right sides</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h2>SDI inspired</h2>
+          <p>Neutral industrial tones with balanced contrast.</p>
+        </div>
+        <img src="assets/prismatic-cell-sdi.svg" alt="SDI style prismatic cell render" />
+        <ul>
+          <li>500mm x 100mm x 20mm</li>
+          <li>Terminals on left and right sides</li>
+        </ul>
+      </article>
+    </main>
+
+    <footer>
+      Generated SVGs live in <code>assets/</code>. Update them with
+      <code>python3 scripts/generate_prismatic_cells.py</code>.
+    </footer>
+  </body>
+</html>
