@@ -12,7 +12,7 @@ This repo generates simple 3D-styled SVG renders of prismatic battery cells (500
 
 Static hosting: the repo includes `index.html` that references the SVG assets. Deploy by hosting the repository root on any static host (GitHub Pages, Netlify, S3, etc.).
 
-Streamlit hosting: run `streamlit run streamlit.app.py` (requires the dependency in `requirements.txt`).
+Streamlit hosting: run `streamlit run streamlit_app.py` (requires the dependency in `requirements.txt`).
 
 ## Regenerate images
 
